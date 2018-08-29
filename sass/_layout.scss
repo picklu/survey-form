@@ -1,0 +1,13 @@
+.header,
+.form {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.form {
+    
+    &__field {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}

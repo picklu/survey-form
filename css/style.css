@@ -16,4 +16,13 @@ html {
 body {
   color: #000;
   font-family: "IBM Plex Sans", sans-serif;
-  background-color: orangered; }
+  background-color: #eee; }
+
+.header,
+.form {
+  width: 60vw;
+  margin: 0 auto; }
+
+.form__field {
+  display: grid;
+  grid-template-columns: 1fr auto; }
