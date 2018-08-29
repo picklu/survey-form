@@ -9,7 +9,154 @@
 </head>
 <body>
     
-    <h1>A survey form</h1>
+    <header class="header">
+        <h1 id="title" class="title">Survey Form</h1>
+        <p>Let us know how we can improve freeCodeCamp</p>
+    </header>
+    
+    <form class="form" action="#">
+        
+        <div class="form__field name">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name"/>
+        </div>
+        
+        <div class="form__field email">
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email"/>
+        </div>
+        
+        <div class="form__field role">
+            <label for="role">Which option best describes your current role?</label>
+            <select name="role" id="role">
+                <option value="" disabled selected hidden>Select an option</option>
+                <option value="stdt">Student</option>
+                <option value="ftjb">Full time job</option>
+                <option value="ftlr">Full time learner</option>
+                <option value="pnts">Prefer not to say</option>
+                <option value="othr">Other</option>
+            </select>
+        </div>
+        
+        <div class="form__field recommendation">
+            <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="defn">
+                            <input id="defn" type="radio" name="recommendation"/>
+                            Definitely
+                        </label>
+                    </li>
+                    <li>
+                        <label for="mayb">
+                            <input id="mayb" type="radio" name="recommendation"/>
+                            Maybe
+                        </label>
+                    </li>
+                    <li>
+                        <label for="nots">
+                            <input id="nots" type="radio" name="recommendation"/>
+                            Not sure
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        
+        <div class="form__field like-most">
+            <label for="like-most">What do you like most in freeCodeCamp?</label>
+            <select name="like-most" id="like-most">
+                <option value="" disabled selected hidden>Select an option</option>
+                <option value="chalg">Challenges</option>
+                <option value="proj">Projects</option>
+                <option value="comm">Community</option>
+                <option value="osrc">Open Source</option>
+                <option value="othr">Other</option>
+            </select>
+        </div>
+        
+        <div class="form__field suggestion">
+            <p>Things that should be improved in the future <span>(Check all that apply):</span></p>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="fepj">
+                            <input id="fepj" type="checkbox" name="suggestion"/>
+                            Front-end Projects
+                        </label>
+                    </li>
+                    <li>
+                        <label for="bepj">
+                            <input id="bepj" type="checkbox" name="suggestion"/>
+                            Back-end Projects
+                        </label>
+                    </li>
+                    <li>
+                        <label for="dtvs">
+                            <input id="dtvs" type="checkbox" name="suggestion"/>
+                            Data Visualization
+                        </label>
+                    </li>
+                    <li>
+                        <label for="chlg">
+                            <input id="chlg" type="checkbox" name="suggestion"/>
+                            Challenges
+                        </label>
+                    </li>
+                    <li>
+                        <label for="oscm">
+                            <input id="oscm" type="checkbox" name="suggestion"/>
+                            Open Source Community
+                        </label>
+                    </li>
+                    <li>
+                        <label for="gthr">
+                            <input id="gthr" type="checkbox" name="suggestion"/>
+                            Gitter Help Rooms
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ctmt">
+                            <input id="ctmt" type="checkbox" name="suggestion"/>
+                            City Meetups
+                        </label>
+                    </li>
+                    <li>
+                        <label for="wiki">
+                            <input id="wiki" type="checkbox" name="suggestion"/>
+                            Wiki
+                        </label>
+                    </li>
+                    <li>
+                        <label for="frms">
+                            <input id="frms" type="checkbox" name="suggestion"/>
+                            Forums
+                        </label>
+                    </li>
+                    <li>
+                        <label for="adcs">
+                            <input id="adcs" type="checkbox" name="suggestion"/>
+                            Additional Courses
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        
+        <div class="form__field asuggestion">
+            <label for="asuggestion">Any commesnt or suggestion:</label>
+            <textarea id="asuggestion" name="asuggestion" placeholder="Enter your comment here ...">
+            </textarea>
+        </div>
+        
+        <input class="btn btn-submit" type="submit" name="submit"/>
+    </form>
+    
+    <footer>
+        <p>Design and developed by Subrata Sarker with &hearts;</p>
+        <small>&copy; 2018 freeCodeCamp</small>
+    </footer>
     
     
     <!-- test script -->
