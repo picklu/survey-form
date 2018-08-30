@@ -1,0 +1,16 @@
+.header {
+    background-color: rgba(#333, .5);
+    box-shadow: 0 5px 10px rgba(#000, 0.7);
+    color: $color-white;
+    text-align: center;
+    line-height: 2;
+    
+    &__title {
+        font-size: 3.5rem;
+        font-weight: 600;
+        
+        &--sub {
+            font-weight: 400;
+        }
+    }
+}
