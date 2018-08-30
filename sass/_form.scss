@@ -1,0 +1,16 @@
+.form {
+    box-shadow: 0 5px 10px rgba(#999, 0.5);
+    font-size: 2.2rem;
+}
+
+.btn-submit {
+    background-color: #777;
+    border: none;
+    border-radius: 5px;
+    color: $color-white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 1.5rem;
+    width: 100%;
+    grid-column: 1 / -1;
+}

@@ -4,10 +4,12 @@
     width: 50vw;
     margin: 0 auto;
     padding: 5rem;
-    box-shadow: 0 5px 10px rgba(#000, 0.3);
+    
 }
 
 .header {
+    border-bottom: 1px solid #555;
+    border-radius: 5px 5px 0 0;
     margin-top: 5rem;
 }
 
@@ -16,7 +18,7 @@
     &__field {
         display: grid;
         grid-template-columns: 3fr 2fr;
-        grid-row-gap: 3rem;
-        grid-column-gap: 2rem;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
     }
 }
