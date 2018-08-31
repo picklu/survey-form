@@ -11,24 +11,24 @@
     
     <header class="header">
         <h1 id="title" class="header__title">Survey Form</h1>
-        <p class="header__title--sub">Let us know how we can improve freeCodeCamp</p>
+        <p id="desciption" class="header__title--sub">Let us know how we can improve <em>freeCodeCamp</em></p>
     </header>
     
     <form class="form" action="#">
         
         <div class="form__field name">
-            <label for="name">Name:</label>
+            <label class="form__field--label" for="name">Name:</label>
             <input id="name" type="text" name="name"/>
         </div>
         
         <div class="form__field email">
-            <label for="email">Email:</label>
+            <label class="form__field--label" for="email">Email:</label>
             <input id="email" type="email" name="email"/>
         </div>
         
         <div class="form__field role">
-            <label for="role">Which option best describes your current role?</label>
-            <select name="role" id="role">
+            <label class="form__field--label" for="role">Which option best describes your current role?</label>
+            <select class="form__field--item" name="role" id="role">
                 <option value="" disabled selected hidden>Select an option</option>
                 <option value="stdt">Student</option>
                 <option value="ftjb">Full time job</option>
@@ -39,8 +39,8 @@
         </div>
         
         <div class="form__field recommendation">
-            <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
-            <fieldset>
+            <p class="form__field--label">How likely is that you would recommend freeCodeCamp to a friend?</p>
+            <fieldset class="form__field--set">
                 <ul>
                     <li>
                         <label for="defn">
@@ -65,8 +65,8 @@
         </div>
         
         <div class="form__field like-most">
-            <label for="like-most">What do you like most in freeCodeCamp?</label>
-            <select name="like-most" id="like-most">
+            <label class="form__field--label" for="like-most">What do you like most in freeCodeCamp?</label>
+            <select class="form__field--item" name="like-most" id="like-most">
                 <option value="" disabled selected hidden>Select an option</option>
                 <option value="chalg">Challenges</option>
                 <option value="proj">Projects</option>
@@ -77,8 +77,8 @@
         </div>
         
         <div class="form__field suggestion">
-            <p>Things that should be improved in the future <span>(Check all that apply):</span></p>
-            <fieldset>
+            <p class="form__field--label">Things that should be improved in the future <span>(Check all that apply):</span></p>
+            <fieldset class="form__field--set">
                 <ul>
                     <li>
                         <label for="fepj">
@@ -145,8 +145,8 @@
         </div>
         
         <div class="form__field asuggestion">
-            <label for="asuggestion">Any comment or suggestion:</label>
-            <textarea id="asuggestion" name="asuggestion" rows="5" placeholder="Enter your comment here ...">
+            <label class="form__field--label" for="asuggestion">Any comment or suggestion:</label>
+            <textarea class="form__field--item" id="asuggestion" name="asuggestion" rows="5" placeholder="Enter your comment here ...">
             </textarea>
         </div>
         
