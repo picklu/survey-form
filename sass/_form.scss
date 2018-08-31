@@ -1,6 +1,9 @@
 .form {
-    box-shadow: 0 5px 10px rgba(#999, 0.5);
-    font-size: 2.2rem;
+    background-color: $color-white;
+    box-shadow: 0 5px 10px rgba($color-primary-dark, 0.7);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2;
     
     &__field {
         
@@ -11,6 +14,45 @@
         
         &--label {
             text-align: right;
+        }
+        
+        &--input,
+        &--select {
+            background-color: rgba($color-primary-light, .1);
+            border: 2px solid rgba($color-primary, 0.3);
+            border-radius: 5px;
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            outline: none;
+            padding: 5px;
+            transition: all .2s;
+            
+            &:hover,
+            &:focus {
+                background-color: rgba($color-primary-light, .3);
+                border: 2px solid rgba($color-primary, 0.5);
+            }
+        }
+        
+        &--textarea {
+            background-color: rgba($color-primary-light, .1);
+            border: 2px solid rgba($color-primary, 0.3);
+            border-radius: 5px;
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            outline: none;
+            padding: 5px;
+            resize: none;
+            transition: all .2s;
+            
+            &:focus {
+                background-color: rgba($color-primary-light, .3);
+                border: 2px solid rgba($color-primary, 0.5);
+            }
         }
         
         &--set {
@@ -24,13 +66,28 @@
 }
 
 .btn-submit {
-    background-color: #777;
+    background-color: $color-primary;
     border: none;
     border-radius: 5px;
+    box-shadow: 0 0 3px $color-primary-dark;
     color: $color-white;
     font-size: 2.5rem;
     font-weight: 400;
     padding: 1.5rem;
-    width: 100%;
     grid-column: 1 / -1;
+    transition: all .2s;
+    
+    &:hover,
+    &:active {
+        background-color: $color-primary-dark;
+        box-shadow: 5px 5px 15px $color-primary-light,
+                    -5px -5px 15px $color-primary-light,
+                    -5px 5px 15px $color-primary-light,
+                    5px -5px 15px $color-primary-light;
+        transform: translateY(-2px);
+    }
+    
+    &:focus {
+        outline: none;
+    }
 }

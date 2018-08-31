@@ -18,17 +18,17 @@
         
         <div class="form__field name">
             <label class="form__field--label" for="name">Name:</label>
-            <input id="name" type="text" name="name"/>
+            <input id="name" class="form__field--input" type="text" name="name"/>
         </div>
         
         <div class="form__field email">
             <label class="form__field--label" for="email">Email:</label>
-            <input id="email" type="email" name="email"/>
+            <input id="email" class="form__field--input" type="email" name="email"/>
         </div>
         
         <div class="form__field role">
             <label class="form__field--label" for="role">Which option best describes your current role?</label>
-            <select class="form__field--item" name="role" id="role">
+            <select class="form__field--select" name="role" id="role">
                 <option value="" disabled selected hidden>Select an option</option>
                 <option value="stdt">Student</option>
                 <option value="ftjb">Full time job</option>
@@ -66,7 +66,7 @@
         
         <div class="form__field like-most">
             <label class="form__field--label" for="like-most">What do you like most in freeCodeCamp?</label>
-            <select class="form__field--item" name="like-most" id="like-most">
+            <select class="form__field--select" name="like-most" id="like-most">
                 <option value="" disabled selected hidden>Select an option</option>
                 <option value="chalg">Challenges</option>
                 <option value="proj">Projects</option>
@@ -146,7 +146,7 @@
         
         <div class="form__field asuggestion">
             <label class="form__field--label" for="asuggestion">Any comment or suggestion:</label>
-            <textarea class="form__field--item" id="asuggestion" name="asuggestion" rows="5" placeholder="Enter your comment here ...">
+            <textarea class="form__field--textarea" id="asuggestion" name="asuggestion" rows="5" placeholder="Enter your comment here ...">
             </textarea>
         </div>
         

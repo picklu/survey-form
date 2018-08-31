@@ -5,9 +5,14 @@
 /////////////////////////////////////////////
 
 // Colors
-$color-primary: #000;
-$color-secondary: #4c4c4c;
-$color-white: #eee;
+$color-primary: #008B8B;
+$color-primary-dark: #006161;
+$color-primary-light:  #4CADAD;
+
+$color-grey: #757575;
+
+$color-secondary: #4C4C4C;
+$color-white: #FEFEFE;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
@@ -31,10 +36,12 @@ html {
 }
 
 body {
-    color: $color-primary;
+    color: $color-primary-dark;
     font-family: $font-primary;
-    font-size: 2rem;
     font-weight: 300;
-    background-color: #eee;
+    background-color: $color-white;
+    background-image: linear-gradient(to bottom, 
+                                      rgba($color-primary-light, .1) 0%, 
+                                      rgba($color-primary-dark, .5) 60%);
 }
 

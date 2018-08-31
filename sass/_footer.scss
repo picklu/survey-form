@@ -1,6 +1,7 @@
 .footer {
-    background-color: #555;
+    background-color: $color-primary-dark;
     color: $color-white;
+    font-weight: 400;
     height: 25rem;
     padding: 5rem;
     text-align: center;
@@ -11,6 +12,5 @@
     
     &__copy {
         font-size: 2rem;
-        font-weight: 400;
     }
 }
