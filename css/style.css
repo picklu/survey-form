@@ -35,8 +35,7 @@ body {
 .form__field {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 15px; }
+  grid-column-gap: 5rem; }
 
 .header {
   background-color: rgba(51, 51, 51, 0.5);
@@ -53,6 +52,14 @@ body {
 .form {
   box-shadow: 0 5px 10px rgba(153, 153, 153, 0.5);
   font-size: 2.2rem; }
+  .form__field:not(:last-child) {
+    margin-bottom: 5rem; }
+  .form__field--label {
+    text-align: right; }
+  .form__field--set {
+    border: none; }
+    .form__field--set ul {
+      list-style: none; }
 
 .btn-submit {
   background-color: #777;
