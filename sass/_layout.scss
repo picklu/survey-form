@@ -4,10 +4,28 @@
     margin: 0 auto;
     padding: 5rem;
     
+    @media only screen and (max-width: $bp-large) {
+        padding: 3rem;
+        width: 90vw;
+    }
+    
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+        width: 100vw;
+    }
+    
 }
 
 .header {
     margin-top: 5rem;
+    
+    @media only screen and (max-width: $bp-large) {
+        margin-top: 3rem;
+    }
+    
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 0;
+    }
 }
 
 .form {

@@ -6,7 +6,13 @@
 *********************************************/
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 75%; }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 62.5%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 50%; } }
 
 *, *::before, *::after {
   margin: 0;
@@ -36,9 +42,25 @@ body {
   width: 70vw;
   margin: 0 auto;
   padding: 5rem; }
+  @media only screen and (max-width: 62.5em) {
+    .header,
+    .form {
+      padding: 3rem;
+      width: 90vw; } }
+  @media only screen and (max-width: 50em) {
+    .header,
+    .form {
+      margin: 0;
+      width: 100vw; } }
 
 .header {
   margin-top: 5rem; }
+  @media only screen and (max-width: 62.5em) {
+    .header {
+      margin-top: 3rem; } }
+  @media only screen and (max-width: 50em) {
+    .header {
+      margin-top: 0; } }
 
 .form__field {
   display: grid;
