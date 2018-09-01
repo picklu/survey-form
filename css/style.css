@@ -73,7 +73,8 @@ body {
       grid-column-gap: 2rem; } }
   @media only screen and (max-width: 50em) {
     .form__field {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      grid-row-gap: 1rem; } }
 
 .header {
   background-color: #4CADAD;
@@ -103,6 +104,10 @@ body {
     text-align: right; }
     p.form__field--label, .form__field--label[for="asuggestion"] {
       align-self: start; }
+    @media only screen and (max-width: 50em) {
+      .form__field--label {
+        text-align: left;
+        align-self: start; } }
   .form__field--input::placeholder {
     color: #4CADAD;
     opacity: 1; }
@@ -110,8 +115,12 @@ body {
     color: #4CADAD; }
   .form__field--input::-ms-input-placeholder {
     color: #4CADAD; }
-  .form__field--input:inactive {
-    color: #4CADAD; }
+  @media only screen and (max-width: 62.5em) {
+    .form__field--input {
+      align-self: start; } }
+  @media only screen and (max-width: 50em) {
+    .form__field--input {
+      align-self: start; } }
   .form__field--select {
     cursor: pointer; }
   .form__field--input, .form__field--select {
