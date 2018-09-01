@@ -12,7 +12,7 @@ $color-primary-light:  #4CADAD;
 $color-grey: #757575;
 
 $color-secondary: #4C4C4C;
-$color-white: #FEFEFE;
+$color-white: #EFEFEF;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
@@ -44,4 +44,3 @@ body {
                                       rgba($color-primary-light, .1) 0%, 
                                       rgba($color-primary-dark, .5) 60%);
 }
-
