@@ -11,9 +11,36 @@
             margin-bottom: 5rem;
         }
         
-        
         &--label {
             text-align: right;
+            
+            @at-root p#{&}, &[for="asuggestion"]  {
+                align-self: start;
+            }
+        }
+        
+        &--input {
+            
+            &::placeholder {
+                color: $color-primary-light;
+                opacity: 1;
+            }
+            
+            &:-ms-input-placeholder {
+                color: $color-primary-light;
+            }
+            
+            &::-ms-input-placeholder {
+                color: $color-primary-light;
+            }
+            
+            &:inactive {
+                color: $color-primary-light;
+            }
+        }
+        
+        &--select {
+            cursor: pointer;
         }
         
         &--input,
@@ -28,7 +55,6 @@
             outline: none;
             padding: 5px;
             transition: all .2s;
-            
             
             &:hover,
             &:focus {
@@ -50,7 +76,8 @@
             resize: none;
             transition: all .2s;
             
-            &:focus {
+            &:focus,
+            &:hover {
                 background-color: rgba($color-primary-light, .3);
                 border: 1px solid rgba($color-primary, 0.5);
             }
@@ -168,20 +195,25 @@
 }
 
 .btn-submit {
-    background-color: $color-primary;
+    background-color: $color-primary-dark;
+    background-image: linear-gradient(to right, $color-primary-dark, 
+                                      $color-primary, 
+                                      $color-primary-dark);
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 3px $color-primary-dark;
     color: $color-white;
+    letter-spacing: 2px;
     font-size: 2.5rem;
     font-weight: 400;
     padding: 1.5rem;
+    text-transform: uppercase;
     grid-column: 1 / -1;
     transition: all .2s;
     
     &:hover,
     &:active {
-        background-color: $color-primary-dark;
+        background-image: none;
         box-shadow: 5px 5px 15px $color-primary-light,
                     -5px -5px 15px $color-primary-light,
                     -5px 5px 15px $color-primary-light,
