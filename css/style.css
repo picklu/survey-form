@@ -111,6 +111,34 @@ body {
       list-style: none; }
       .form__field--set ul li:not(:last-child) {
         margin-bottom: 1rem; }
+  .form__checkbox, .form__radio {
+    cursor: pointer;
+    padding-left: 3rem;
+    position: relative; }
+    .form__checkbox-input, .form__radio-input {
+      display: none;
+      position: relative; }
+    .form__checkbox-button, .form__radio-button {
+      display: block;
+      border: 2px solid #4CADAD;
+      height: 2.2rem;
+      width: 2.2rem;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .form__radio-button {
+    background-image: radial-gradient(#EFEFEF, #EFEFEF, #4CADAD);
+    border-radius: 100%; }
+  .form__checkbox-button {
+    box-shadow: 0 0 5px #4CADAD inset;
+    border-radius: 2px; }
+  .form__checkbox-input:checked .form__checkbox-button::before {
+    content: "\2713";
+    font-weight: 600;
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 .btn-submit {
   background-color: #008B8B;
