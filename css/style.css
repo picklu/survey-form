@@ -69,12 +69,11 @@ body {
   align-items: center; }
   @media only screen and (max-width: 62.5em) {
     .form__field {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
       grid-column-gap: 2rem; } }
   @media only screen and (max-width: 50em) {
     .form__field {
-      grid-template-columns: minmax(min-content, 1fr) minmax(1fr, max-content);
-      grid-column-gap: 2rem; } }
+      grid-template-columns: 1fr; } }
 
 .header {
   background-color: #4CADAD;
