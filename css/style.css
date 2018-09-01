@@ -20,6 +20,17 @@ body {
   background-color: #EFEFEF;
   background-image: linear-gradient(to bottom, rgba(76, 173, 173, 0.1) 0%, rgba(0, 97, 97, 0.5) 60%); }
 
+.link {
+  transition: all .2s; }
+  .link, .link:link, .link:visited {
+    color: currentColor;
+    text-decoration: none; }
+  .link:focus, .link:hover {
+    font-weight: 600;
+    text-shadow: 0 0 5px #006161; }
+  .link:active {
+    outline: none; }
+
 .header,
 .form {
   width: 70vw;
