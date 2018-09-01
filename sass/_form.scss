@@ -33,7 +33,12 @@
             }
         }
         
-        &--input {
+        &--input, &--textarea {
+            
+            &::-webkit-input-placeholder {
+                color: $color-primary-light;
+                opacity: 1;
+            }
             
             &::placeholder {
                 color: $color-primary-light;
