@@ -100,6 +100,12 @@
             position: absolute;
             top: 0;
             left: 0;
+            transition: all .2s;
+            
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+            }
             
             &::before {
                 opacity: 0;
@@ -123,7 +129,6 @@
         
         &-button::before {
             background-color: $color-primary-dark;
-            background-image: none;
             border: 1px solid $color-primary-dark;
             border-radius: 50%;
             box-shadow: 0 0 3px $color-primary-dark;
@@ -142,6 +147,7 @@
         &-button {
             box-shadow: 0 0 5px $color-primary-light inset;
             border-radius: 1px;
+            
         }
         
         &-input:checked + &-button {
@@ -153,7 +159,6 @@
             font-weight: 600;
             display: table;
             padding-left: 2px;
-            padding-bottom: 3px;
             text-shadow: 0 0 3px $color-primary-light;
             position: absolute;
             top: 0;
