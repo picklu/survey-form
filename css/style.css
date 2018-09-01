@@ -100,6 +100,12 @@ body {
   line-height: 1.2; }
   .form__field:not(:last-child) {
     margin-bottom: 5rem; }
+    @media only screen and (max-width: 62.5em) {
+      .form__field:not(:last-child) {
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 50em) {
+      .form__field:not(:last-child) {
+        margin-bottom: 2rem; } }
   .form__field--label {
     text-align: right; }
     p.form__field--label, .form__field--label[for="asuggestion"] {
