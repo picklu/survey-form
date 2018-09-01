@@ -10,7 +10,7 @@ html {
   @media only screen and (max-width: 62.5em) {
     html {
       font-size: 62.5%; } }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 50em) {
     html {
       font-size: 50%; } }
 
@@ -67,6 +67,14 @@ body {
   grid-template-columns: 3fr 2fr;
   grid-column-gap: 5rem;
   align-items: center; }
+  @media only screen and (max-width: 62.5em) {
+    .form__field {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem; } }
+  @media only screen and (max-width: 50em) {
+    .form__field {
+      grid-template-columns: minmax(min-content, 1fr) minmax(1fr, max-content);
+      grid-column-gap: 2rem; } }
 
 .header {
   background-color: #4CADAD;
