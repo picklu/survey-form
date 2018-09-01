@@ -3,7 +3,7 @@
     box-shadow: 0 5px 10px rgba($color-primary-dark, 0.7);
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.2;
     
     &__field {
         
@@ -19,7 +19,7 @@
         &--input,
         &--select {
             background-color: rgba($color-primary-light, .1);
-            border: 2px solid rgba($color-primary, 0.3);
+            border: 1px solid rgba($color-primary, 0.3);
             border-radius: 5px;
             color: inherit;
             font-family: inherit;
@@ -29,16 +29,17 @@
             padding: 5px;
             transition: all .2s;
             
+            
             &:hover,
             &:focus {
                 background-color: rgba($color-primary-light, .3);
-                border: 2px solid rgba($color-primary, 0.5);
+                border: 1px solid rgba($color-primary, 0.5);
             }
         }
         
         &--textarea {
             background-color: rgba($color-primary-light, .1);
-            border: 2px solid rgba($color-primary, 0.3);
+            border: 1px solid rgba($color-primary, 0.3);
             border-radius: 5px;
             color: inherit;
             font-family: inherit;
@@ -51,15 +52,31 @@
             
             &:focus {
                 background-color: rgba($color-primary-light, .3);
-                border: 2px solid rgba($color-primary, 0.5);
+                border: 1px solid rgba($color-primary, 0.5);
             }
         }
+        
+        &--input:-webkit-autofill,
+        &--textarea:-webkit-autofill,
+        &--input:-webkit-autofill:hover,
+        &--textarea:-webkit-autofill:hover,
+        &--input:-webkit-autofill:focus,
+        &--textarea:-webkit-autofill:focus {
+            background-color: rgba($color-primary-light, .3) !important;
+            border: 1px solid rgba($color-primary, 0.5) !important;
+            -webkit-text-fill-color: $color-primary;
+            transition: background-color 5000s ease-in-out 0s;
+}
         
         &--set {
             border: none;
             
             ul {
                 list-style: none;
+                
+                li:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
