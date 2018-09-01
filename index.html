@@ -14,26 +14,31 @@
         <p id="description" class="header__title--sub">Let us know how we can improve <a class="link" href="https://learn.freecodecamp.org" target="_blank">freeCodeCamp</a></p>
     </header>
     
-    <form class="form" action="#">
+    <form id="survey-form" class="form" action="#">
         
         <div class="form__field name">
-            <label class="form__field--label" for="name">Name:</label>
-            <input id="name" class="form__field--input" type="text" name="name"/>
+            <label id="name-label" class="form__field--label" for="name">Name:</label>
+            <input id="name" class="form__field--input" type="text" name="name" placeholder="Enter your name" required/>
         </div>
         
         <div class="form__field email">
-            <label class="form__field--label" for="email">Email:</label>
-            <input id="email" class="form__field--input" type="email" name="email"/>
+            <label id="email-label" class="form__field--label" for="email">Email:</label>
+            <input id="email" class="form__field--input" type="email" name="email" placeholder="email@example.com" required/>
         </div>
         
         <div class="form__field age">
-            <label class="form__field--label" for="age">Age:</label>
-            <input id="age" class="form__field--input" type="number" name="age"/>
+            <label id="number-label" class="form__field--label" for="age">Age (Years):</label>
+            <input id="number" class="form__field--input" type="number" name="age" min="10" max="110" placeholder="Your age in number from 10 to 110" required/>
+        </div>
+        
+        <div class="form__field how-long">
+            <label id="how-long-label" class="form__field--label" for="how-long">How long have you been learning web development with freeCodeCamp?<br/>(Years):</label>
+            <input id="how-long-number" class="form__field--input" type="number" name="how-long" min="0" placeholder="Your answer from 0 to 3" required/>
         </div>
         
         <div class="form__field role">
-            <label class="form__field--label" for="role">Which option best describes your current role?</label>
-            <select class="form__field--select" name="role" id="role">
+            <label class="form__field--label" for="dropdown">Which option best describes your current role?</label>
+            <select class="form__field--select" name="dropdown" id="dropdown">
                 <option value="" disabled selected hidden>Select an option</option>
                 <option value="stdt">Student</option>
                 <option value="ftjb">Full time job</option>
@@ -43,27 +48,77 @@
             </select>
         </div>
         
+        <div class="form__field achievement">
+            <p class="form__field--label">Which ceritificates have you earned so far?<br/>(Check all that apply):</p>
+            <fieldset class="form__field--set">
+                <ul>
+                    <li>
+                        <label class="form__checkbox" for="rwdc">
+                            <input id="rwdc" class="form__checkbox-input" type="checkbox" value="rwdc" name="achievement" />
+                            Responsive Web Design Certification
+                            <span class="form__checkbox-button"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form__checkbox" for="jaadsc">
+                            <input id="jaadsc" class="form__checkbox-input" type="checkbox" value="jaadsc" name="achievement" />
+                            Javascript Algorithms And Data Structures Certification
+                            <span class="form__checkbox-button"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form__checkbox" for="felc">
+                            <input id="felc" class="form__checkbox-input" type="checkbox" value="felc" name="achievement" />
+                            Front End Libraries Certification
+                            <span class="form__checkbox-button"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form__checkbox" for="dvc">
+                            <input id="dvc" class="form__checkbox-input" type="checkbox" value="dvc" name="achievement" />
+                            Data Visualization Certification
+                            <span class="form__checkbox-button"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form__checkbox" for="aamc">
+                            <input id="aamc" class="form__checkbox-input" type="checkbox" value="aamc" name="achievement" />
+                            Apis And Microservices Certification
+                            <span class="form__checkbox-button"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form__checkbox" for="isaqac">
+                            <input id="isaqac" class="form__checkbox-input" type="checkbox" value="isaqac" name="achievement" />
+                            Information Security And Quality Assurance Certification
+                            <span class="form__checkbox-button"></span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>        
+        
         <div class="form__field recommendation">
             <p class="form__field--label">How likely is that you would recommend freeCodeCamp to a friend?</p>
             <fieldset class="form__field--set">
                 <ul>
                     <li>
                         <label class="form__radio" for="defn">
-                            <input id="defn" class="form__radio-input" type="radio" name="recommendation"/>
+                            <input id="defn" class="form__radio-input" type="radio" value="definitely" name="recommendation"/>
                             Definitely
                             <span class="form__radio-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__radio" for="mayb">
-                            <input id="mayb" class="form__radio-input" type="radio" name="recommendation"/>
+                            <input id="mayb" class="form__radio-input" type="radio" value="maybe" name="recommendation"/>
                             Maybe
                             <span class="form__radio-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__radio" for="nots">
-                            <input id="nots" class="form__radio-input" type="radio" name="recommendation"/>
+                            <input id="nots" class="form__radio-input" type="radio" value="not-sure" name="recommendation"/>
                             Not sure
                             <span class="form__radio-button"></span>
                         </label>
@@ -85,75 +140,75 @@
         </div>
         
         <div class="form__field suggestion">
-            <p class="form__field--label">Things that should be improved in the future <span>(Check all that apply):</span></p>
+            <p class="form__field--label">Things that should be improved in the future <br/>(Check all that apply):</p>
             <fieldset class="form__field--set">
                 <ul>
                     <li>
                         <label class="form__checkbox" for="fepj">
-                            <input id="fepj" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="fepj" class="form__checkbox-input" type="checkbox" value="fepj" name="suggestion"/>
                             Front-end Projects
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="bepj">
-                            <input id="bepj" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="bepj" class="form__checkbox-input" type="checkbox" value="bepj" name="suggestion"/>
                             Back-end Projects
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="dtvs">
-                            <input id="dtvs" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="dtvs" class="form__checkbox-input" type="checkbox" value="dtvs" name="suggestion"/>
                             Data Visualization
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="chlg">
-                            <input id="chlg" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="chlg" class="form__checkbox-input" type="checkbox" value="chlg" name="suggestion"/>
                             Challenges
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="oscm">
-                            <input id="oscm" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="oscm" class="form__checkbox-input" type="checkbox" value="oscm" name="suggestion"/>
                             Open Source Community
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="gthr">
-                            <input id="gthr" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="gthr" class="form__checkbox-input" type="checkbox" value="gthr" name="suggestion"/>
                             Gitter Help Rooms
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="ctmt">
-                            <input id="ctmt" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="ctmt" class="form__checkbox-input" type="checkbox" value="ctmt" name="suggestion"/>
                             City Meetups
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="wiki">
-                            <input id="wiki" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="wiki" class="form__checkbox-input" type="checkbox" value="wiki" name="suggestion"/>
                             Wiki
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="frms">
-                            <input id="frms" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="frms" class="form__checkbox-input" type="checkbox" value="frms" name="suggestion"/>
                             Forums
                             <span class="form__checkbox-button"></span>
                         </label>
                     </li>
                     <li>
                         <label class="form__checkbox" for="adcs">
-                            <input id="adcs" class="form__checkbox-input" type="checkbox" name="suggestion"/>
+                            <input id="adcs" class="form__checkbox-input" type="checkbox" value="adcs" name="suggestion"/>
                             Additional Courses
                             <span class="form__checkbox-button"></span>
                         </label>
@@ -169,7 +224,7 @@
         </div>
         
         <div class="form__field btn">
-            <input class="btn-submit" type="submit" name="submit"/>
+            <input id="submit" class="btn-submit" type="submit" name="submit"/>
         </div>
         
     </form>
