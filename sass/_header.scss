@@ -8,6 +8,7 @@
     line-height: 2;
     
     @media only screen and (max-width: $bp-medium) {
+        box-shadow: none;
         line-height: 1.5;
     }
     

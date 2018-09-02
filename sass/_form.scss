@@ -5,6 +5,11 @@
     font-weight: 400;
     line-height: 1.2;
     
+    
+    @media only screen and (max-width: $bp-medium) {
+        box-shadow: none;
+    }
+    
     &__field {
         
         &:not(:last-child) {
