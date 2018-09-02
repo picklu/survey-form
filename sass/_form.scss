@@ -1,8 +1,8 @@
 .form {
     background-color: $color-white;
     box-shadow: 0 5px 10px rgba($color-primary-dark, 0.7);
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 1.6rem;
+    font-weight: 400;
     line-height: 1.2;
     
     &__field {
@@ -21,6 +21,7 @@
         }
         
         &--label {
+            font-size: 1.8rem;
             font-weight: 500;
             text-align: right;
             
