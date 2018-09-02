@@ -42,6 +42,8 @@
         
         &--input, &--textarea {
             
+            align-self: start;
+            
             &::-webkit-input-placeholder {
                 color: $color-primary-light;
                 opacity: 1;
@@ -58,14 +60,6 @@
             
             &::-ms-input-placeholder {
                 color: $color-primary-light;
-            }
-            
-            @media only screen and (max-width: $bp-large) {
-                align-self: start;
-            }
-            
-            @media only screen and (max-width: $bp-medium) {
-                align-self: start;
             }
         }
         
