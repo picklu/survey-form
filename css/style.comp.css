@@ -51,6 +51,7 @@ body {
     .header,
     .form {
       margin: 0;
+      padding: 2rem;
       width: 100vw; } }
 
 .header {
@@ -84,6 +85,9 @@ body {
   color: #EFEFEF;
   text-align: center;
   line-height: 2; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      line-height: 1.5; } }
   .header__title {
     font-size: 3.5rem;
     font-weight: 600;
@@ -91,6 +95,9 @@ body {
     .header__title--sub {
       font-size: 2.5rem;
       font-weight: 400; }
+      @media only screen and (max-width: 50em) {
+        .header__title--sub {
+          font-size: 2rem; } }
 
 .form {
   background-color: #EFEFEF;
@@ -107,6 +114,8 @@ body {
       .form__field:not(:last-child) {
         margin-bottom: 2rem; } }
   .form__field--label {
+    font-size: 2rem;
+    font-weight: 500;
     text-align: right; }
     p.form__field--label, .form__field--label[for="asuggestion"] {
       align-self: start; }
