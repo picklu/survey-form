@@ -128,16 +128,21 @@ body {
       .form__field--label {
         text-align: left;
         align-self: start; } }
-  .form__field--input::-webkit-input-placeholder, .form__field--textarea::-webkit-input-placeholder {
+  .form__field--input::-webkit-input-placeholder, .form__field--textarea-item::-webkit-input-placeholder {
     color: #4CADAD;
     opacity: 1; }
-  .form__field--input::placeholder, .form__field--textarea::placeholder {
+  .form__field--input::placeholder, .form__field--textarea-item::placeholder {
     color: #4CADAD;
     opacity: 1; }
-  .form__field--input:-ms-input-placeholder, .form__field--textarea:-ms-input-placeholder {
+  .form__field--input:-ms-input-placeholder, .form__field--textarea-item:-ms-input-placeholder {
     color: #4CADAD; }
-  .form__field--input::-ms-input-placeholder, .form__field--textarea::-ms-input-placeholder {
+  .form__field--input::-ms-input-placeholder, .form__field--textarea-item::-ms-input-placeholder {
     color: #4CADAD; }
+  .form__field--input:-webkit-autofill, .form__field--input:-webkit-autofill, .form__field--input:-webkit-autofill:hover, .form__field--input:-webkit-autofill:hover, .form__field--input:-webkit-autofill:focus, .form__field--input:-webkit-autofill:focus, .form__field--textarea-item:-webkit-autofill, .form__field--textarea-item:-webkit-autofill, .form__field--textarea-item:-webkit-autofill:hover, .form__field--textarea-item:-webkit-autofill:hover, .form__field--textarea-item:-webkit-autofill:focus, .form__field--textarea-item:-webkit-autofill:focus {
+    background-color: rgba(76, 173, 173, 0.3) !important;
+    border: 1px solid rgba(0, 139, 139, 0.5) !important;
+    -webkit-text-fill-color: #008B8B;
+    transition: background-color 5000s ease-in-out 0s; }
   .form__field--select {
     cursor: pointer; }
   .form__field--input, .form__field--select {
@@ -155,25 +160,26 @@ body {
       background-color: rgba(76, 173, 173, 0.3);
       border: 1px solid rgba(0, 139, 139, 0.5); }
   .form__field--textarea {
-    background-color: rgba(76, 173, 173, 0.1);
-    border: 1px solid rgba(0, 139, 139, 0.3);
+    background-color: transparent;
+    border: 0;
     border-radius: 5px;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    outline: none;
-    padding: 5px;
-    resize: none;
-    transition: all .2s; }
-    .form__field--textarea:focus, .form__field--textarea:hover {
-      background-color: rgba(76, 173, 173, 0.3);
-      border: 1px solid rgba(0, 139, 139, 0.5); }
-  .form__field--input:-webkit-autofill, .form__field--textarea:-webkit-autofill, .form__field--input:-webkit-autofill:hover, .form__field--textarea:-webkit-autofill:hover, .form__field--input:-webkit-autofill:focus, .form__field--textarea:-webkit-autofill:focus {
-    background-color: rgba(76, 173, 173, 0.3) !important;
-    border: 1px solid rgba(0, 139, 139, 0.5) !important;
-    -webkit-text-fill-color: #008B8B;
-    transition: background-color 5000s ease-in-out 0s; }
+    padding: 2px; }
+    .form__field--textarea-item {
+      background-color: rgba(76, 173, 173, 0.1);
+      border: 1px solid rgba(0, 139, 139, 0.3);
+      border-radius: inherit;
+      color: currentColor;
+      font-size: inherit;
+      font-family: inherit;
+      margin: 0;
+      padding: 5px;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      transition: all .2s; }
+      .form__field--textarea-item:focus, .form__field--textarea-item:hover {
+        background-color: rgba(76, 173, 173, 0.3);
+        border: 1px solid rgba(0, 139, 139, 0.5); }
   .form__field--set {
     border: none; }
     .form__field--set ul {
@@ -251,6 +257,7 @@ body {
   .btn-submit:hover, .btn-submit:active {
     background-image: none;
     box-shadow: 5px 5px 15px #4CADAD, -5px -5px 15px #4CADAD, -5px 5px 15px #4CADAD, 5px -5px 15px #4CADAD;
+    cursor: pointer;
     transform: translateY(-2px); }
   .btn-submit:focus {
     outline: none; }

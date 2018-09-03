@@ -40,7 +40,7 @@
             }
         }
         
-        &--input, &--textarea {
+        &--input, &--textarea-item {
             
             &::-webkit-input-placeholder {
                 color: $color-primary-light;
@@ -58,6 +58,18 @@
             
             &::-ms-input-placeholder {
                 color: $color-primary-light;
+            }
+            
+            &:-webkit-autofill,
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:focus {
+                background-color: rgba($color-primary-light, .3) !important;
+                border: 1px solid rgba($color-primary, 0.5) !important;
+                -webkit-text-fill-color: $color-primary;
+                transition: background-color 5000s ease-in-out 0s;
             }
         }
         
@@ -86,35 +98,31 @@
         }
         
         &--textarea {
-            background-color: rgba($color-primary-light, .1);
-            border: 1px solid rgba($color-primary, 0.3);
+            background-color: transparent;
+            border: 0;
             border-radius: 5px;
-            color: inherit;
-            font-family: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            outline: none;
-            padding: 5px;
-            resize: none;
-            transition: all .2s;
+            padding: 2px;
             
-            &:focus,
-            &:hover {
-                background-color: rgba($color-primary-light, .3);
-                border: 1px solid rgba($color-primary, 0.5);
+            &-item {
+                background-color: rgba($color-primary-light, .1);
+                border: 1px solid rgba($color-primary, 0.3);
+                border-radius: inherit;
+                color: currentColor;
+                font-size: inherit;
+                font-family: inherit;
+                margin: 0;
+                padding: 5px;
+                width: 100%;
+                height: 100%;
+                outline: none;
+                transition: all .2s;
+            
+                &:focus,
+                &:hover {
+                    background-color: rgba($color-primary-light, .3);
+                    border: 1px solid rgba($color-primary, 0.5);
+                }
             }
-        }
-        
-        &--input:-webkit-autofill,
-        &--textarea:-webkit-autofill,
-        &--input:-webkit-autofill:hover,
-        &--textarea:-webkit-autofill:hover,
-        &--input:-webkit-autofill:focus,
-        &--textarea:-webkit-autofill:focus {
-            background-color: rgba($color-primary-light, .3) !important;
-            border: 1px solid rgba($color-primary, 0.5) !important;
-            -webkit-text-fill-color: $color-primary;
-            transition: background-color 5000s ease-in-out 0s;
         }
         
         &--set {
@@ -241,6 +249,7 @@
                     -5px -5px 15px $color-primary-light,
                     -5px 5px 15px $color-primary-light,
                     5px -5px 15px $color-primary-light;
+        cursor: pointer;
         transform: translateY(-2px);
     }
     
