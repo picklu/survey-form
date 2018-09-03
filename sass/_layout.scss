@@ -34,17 +34,17 @@
     &__field {
         
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 3fr [input-start] 2fr [input-end];
         grid-column-gap: 5rem;
         align-items: center;
         
         @media only screen and (max-width: $bp-large) {
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr [input-start] 2fr [input-end];
             grid-column-gap: 2rem;
         }
         
         @media only screen and (max-width: $bp-medium) {
-            grid-template-columns: 1fr;
+            grid-template-columns: [input-start] 1fr [input-end];
             grid-row-gap: 1rem;
         }
     }
