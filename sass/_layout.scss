@@ -47,6 +47,12 @@
             grid-template-columns: [input-start] 1fr [input-end];
             grid-row-gap: 1rem;
         }
+        
+        &--input, &--textarea {
+            width: 100%;
+            grid-column: input-start / input-end;
+            align-self: start;
+        }
     }
 }
 

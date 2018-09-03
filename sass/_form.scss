@@ -41,9 +41,6 @@
         }
         
         &--input, &--textarea {
-            width: 100%;
-            grid-column: input-start / input-end;
-            align-self: start;
             
             &::-webkit-input-placeholder {
                 color: $color-primary-light;

@@ -73,6 +73,10 @@ body {
     .form__field {
       grid-template-columns: [input-start] 1fr [input-end];
       grid-row-gap: 1rem; } }
+  .form__field--input, .form__field--textarea {
+    width: 100%;
+    grid-column: input-start / input-end;
+    align-self: start; }
 
 .header {
   background-color: #4CADAD;
@@ -124,20 +128,16 @@ body {
       .form__field--label {
         text-align: left;
         align-self: start; } }
-  .form__field--input, .form__field--textarea {
-    width: 100%;
-    grid-column: input-start / input-end;
-    align-self: start; }
-    .form__field--input::-webkit-input-placeholder, .form__field--textarea::-webkit-input-placeholder {
-      color: #4CADAD;
-      opacity: 1; }
-    .form__field--input::placeholder, .form__field--textarea::placeholder {
-      color: #4CADAD;
-      opacity: 1; }
-    .form__field--input:-ms-input-placeholder, .form__field--textarea:-ms-input-placeholder {
-      color: #4CADAD; }
-    .form__field--input::-ms-input-placeholder, .form__field--textarea::-ms-input-placeholder {
-      color: #4CADAD; }
+  .form__field--input::-webkit-input-placeholder, .form__field--textarea::-webkit-input-placeholder {
+    color: #4CADAD;
+    opacity: 1; }
+  .form__field--input::placeholder, .form__field--textarea::placeholder {
+    color: #4CADAD;
+    opacity: 1; }
+  .form__field--input:-ms-input-placeholder, .form__field--textarea:-ms-input-placeholder {
+    color: #4CADAD; }
+  .form__field--input::-ms-input-placeholder, .form__field--textarea::-ms-input-placeholder {
+    color: #4CADAD; }
   .form__field--select {
     cursor: pointer; }
   .form__field--input, .form__field--select {
