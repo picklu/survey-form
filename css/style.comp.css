@@ -121,6 +121,7 @@ body {
   .form__field--label {
     font-size: 1.8rem;
     font-weight: 500;
+    line-height: 1.3;
     text-align: right; }
     p.form__field--label, .form__field--label[for="asuggestion"] {
       align-self: start; }
