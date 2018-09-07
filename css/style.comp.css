@@ -184,6 +184,8 @@ body {
     border: none; }
     .form__field--set ul {
       list-style: none; }
+      .form__field--set ul li {
+        line-height: 1.5; }
       .form__field--set ul li:not(:last-child) {
         margin-bottom: 1rem; }
   .form__checkbox, .form__radio {
