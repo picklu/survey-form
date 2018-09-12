@@ -205,8 +205,6 @@ body {
       top: 0;
       left: 0;
       transition: all .2s; }
-      .form__checkbox-button:hover, .form__checkbox-button:focus, .form__radio-button:hover, .form__radio-button:focus {
-        transform: scale(1.1); }
       .form__checkbox-button::before, .form__radio-button::before {
         opacity: 0;
         transition: opacity .3s; }
@@ -241,7 +239,7 @@ body {
     text-shadow: 0 0 3px #4CADAD;
     position: absolute;
     bottom: 1px;
-    left: 1px; }
+    top: -1px; }
 
 .btn-submit {
   background-color: #006161;
