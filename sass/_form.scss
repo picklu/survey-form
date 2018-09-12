@@ -164,11 +164,6 @@
             left: 0;
             transition: all .2s;
             
-            &:hover,
-            &:focus {
-                transform: scale(1.1);
-            }
-            
             &::before {
                 opacity: 0;
                 transition: opacity .3s;
