@@ -97,7 +97,7 @@ body {
       box-shadow: none;
       line-height: 1.5; } }
   .header__title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 600;
     letter-spacing: 1px; }
     .header__title--sub {
@@ -165,7 +165,8 @@ body {
     transition: all .2s; }
     .form__field--input:hover, .form__field--input:focus, .form__field--select:hover, .form__field--select:focus {
       background-color: rgba(76, 173, 173, 0.3);
-      border: 1px solid rgba(0, 139, 139, 0.5); }
+      border: 1px solid rgba(0, 139, 139, 0.5);
+      border-bottom: 5px solid #008B8B; }
   .form__field--textarea {
     background-color: transparent;
     border: 0;
@@ -214,6 +215,8 @@ body {
       .form__checkbox-button::before, .form__radio-button::before {
         opacity: 0;
         transition: opacity .3s; }
+    .form__checkbox-input:hover + .form__checkbox-button, .form__radio-input:hover + .form__checkbox-button, .form__checkbox-input:hover + .form__radio-button, .form__radio-input:hover + .form__radio-button {
+      background-image: radial-gradient(#EFEFEF, #4CADAD, #008B8B); }
     .form__checkbox-input:checked + .form__checkbox-button::before, .form__radio-input:checked + .form__checkbox-button::before, .form__checkbox-input:checked + .form__radio-button::before, .form__radio-input:checked + .form__radio-button::before {
       opacity: 1; }
   .form__radio-button {
@@ -231,6 +234,8 @@ body {
     position: absolute;
     top: calc(50% - .5rem);
     left: calc(50% - .5rem); }
+  ul:hover .form__radio-input:checked + .form__radio-button::before {
+    opacity: .7; }
   .form__checkbox-button {
     box-shadow: 0 0 5px #4CADAD inset;
     border-radius: 1px; }
