@@ -215,6 +215,8 @@ body {
       .form__checkbox-button::before, .form__radio-button::before {
         opacity: 0;
         transition: opacity .3s; }
+    .form__checkbox-input:hover + .form__checkbox-button, .form__radio-input:hover + .form__checkbox-button, .form__checkbox-input:hover + .form__radio-button, .form__radio-input:hover + .form__radio-button {
+      background-image: radial-gradient(#EFEFEF, #4CADAD, #008B8B); }
     .form__checkbox-input:checked + .form__checkbox-button::before, .form__radio-input:checked + .form__checkbox-button::before, .form__checkbox-input:checked + .form__radio-button::before, .form__radio-input:checked + .form__radio-button::before {
       opacity: 1; }
   .form__radio-button {
@@ -232,6 +234,8 @@ body {
     position: absolute;
     top: calc(50% - .5rem);
     left: calc(50% - .5rem); }
+  ul:hover .form__radio-input:checked + .form__radio-button::before {
+    opacity: .7; }
   .form__checkbox-button {
     box-shadow: 0 0 5px #4CADAD inset;
     border-radius: 1px; }

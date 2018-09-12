@@ -171,6 +171,12 @@
             }
         }
         
+        &-input:hover + &-button {
+            background-image: radial-gradient($color-white,
+                                              $color-primary-light,
+                                              $color-primary);
+        }
+        
         &-input:checked + &-button::before {
             opacity: 1;
         }
@@ -197,6 +203,10 @@
             position: absolute;
             top: calc(50% - .5rem);
             left: calc(50% - .5rem);
+        }
+        
+        ul:hover &-input:checked + &-button::before {
+            opacity: .7;
         }
     }
 
