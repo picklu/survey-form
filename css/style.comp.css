@@ -154,6 +154,7 @@ body {
     -webkit-text-fill-color: #008B8B;
     transition: background-color 5000s ease-in-out 0s; }
   .form__field--select {
+    align-self: flex-start;
     cursor: pointer; }
   .form__field--input, .form__field--select {
     background-color: rgba(76, 173, 173, 0.1);
